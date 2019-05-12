@@ -1,0 +1,19 @@
+version: '2.1'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  redis:
+    image: redis:4.0
+    restart: always
+    ports:
+      - 6379:6379
+    command: >
+      --requirepass root 
+    networks:
+      default:
+        aliases: 
+          - redis
+    
