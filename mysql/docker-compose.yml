@@ -22,18 +22,18 @@ services:
         aliases:
           - mysql
 
-    phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      restart: always
-      ports:
-        - 3307:80
-      environment:
-        PMA_HOST: mysql
-        PMA_PORT: 3306
-        PMA_USER: "root"
-        PMA_PASSWORD: "root"
-        PMA_ARBITRARY: 1
-      networks:
-        default:
-          aliases:
-            - phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 3307:80
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: "root"
+      PMA_PASSWORD: "root"
+      PMA_ARBITRARY: 1
+    networks:
+      default:
+        aliases:
+          - phpmyadmin
